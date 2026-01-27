@@ -26,3 +26,36 @@ The script will:
 - Python 3.6+
 - PyMuPDF (fitz)
 - pillow
+
+---
+
+## Green Remover Tool
+
+A utility to replace specific green color (#5a7e26) with a custom color in images.
+
+### Usage (Python)
+
+```bash
+python green_remover.py <folder_path> [replacement_color]
+```
+
+Examples:
+- `python green_remover.py cards` - uses default bright light blue (#00D4FF)
+- `python green_remover.py cards #FF00FF` - uses custom magenta color
+
+### Building Standalone Executable (for non-programmers)
+
+To create a `.exe` file that doesn't require Python installation:
+
+1. Run the build script:
+   ```bash
+   build_exe.bat
+   ```
+
+2. Find the executable in the `dist` folder: `dist\green_remover.exe`
+
+3. Distribute just the `.exe` file - users can run it like:
+   ```bash
+   green_remover.exe cards
+   green_remover.exe cards #FF00FF
+   ```
