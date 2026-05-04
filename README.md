@@ -29,6 +29,20 @@ The script will:
 
 ---
 
+## PDF to Text
+
+Extract plain text from a PDF into a UTF-8 `.txt` file (same tooling as the mosaic script).
+
+```bash
+python pdf_to_text.py <path_to_pdf> [-o output.txt] [--no-page-markers]
+```
+
+- Default output: same directory and basename as the PDF, with a `.txt` extension.
+- By default, each page is preceded by a `--- Page N ---` line; use `--no-page-markers` for a single continuous block of text.
+- After writing, the script prints character and word counts for the extracted page text (markers excluded from the word count).
+
+---
+
 ## Green Remover Tool
 
 A utility to replace specific green color (#5a7e26) with a custom color in images.
